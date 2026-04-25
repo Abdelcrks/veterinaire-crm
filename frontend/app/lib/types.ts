@@ -7,7 +7,7 @@ export type Animal = {
     species: string;
   }
   
-  export type Owner = {
+export type Owner = {
     id: number;
     civility: string;
     firstName: string;
@@ -15,4 +15,8 @@ export type Animal = {
     email: string;
     phone: string;
     animals: Animal[];
-  }
+}
+
+export type AnimalWithOwner = Animal & {
+    owner: Owner
+}

@@ -1,4 +1,4 @@
-import { Owner } from "@/types"
+import { Owner } from "@/app/lib/types"
 import Link from "next/link"
 
 export const OwnerList = ({owners}: {owners: Owner[]}) => {

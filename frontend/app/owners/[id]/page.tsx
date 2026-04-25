@@ -1,5 +1,5 @@
 import { OwnerDetail } from "@/app/components/owners/OwnerDetail";
-import { Owner } from "@/types";
+import { Owner } from "@/app/lib/types";
 
 const getOwner = async (id:string) :Promise<Owner | null> => {
     try {
