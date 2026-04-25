@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { Owner } from '@/types';
+import type { Owner } from '@/app/lib/types';
 import { AnimalCard } from '../animals/AnimalCard';
 
 export const OwnerDetail = ({ owner }: { owner: Owner }) => {
@@ -12,8 +12,8 @@ export const OwnerDetail = ({ owner }: { owner: Owner }) => {
       <h2 className="text-2xl font-bold mb-2">
         {owner.civility} {owner.firstName} {owner.lastName}
       </h2>
-      <p className="mb-1">Email : {owner.email}</p>
-      <p className="mb-6">Numéro de téléphone : {owner.phone}</p>
+      <p className='mb-1'><span className="font-semibold">Email : </span> {owner.email}</p>
+      <p className='mb-6'><span className="font-semibold">Numéro de téléphone : </span>{owner.phone}</p>
 
       <h3 className="text-xl font-semibold mb-4">Animaux</h3>
       {owner.animals.length === 0 ? (

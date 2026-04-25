@@ -1,4 +1,4 @@
-import { Owner } from "@/types";
+import { Owner } from "@/app/lib/types";
 import { OwnerList } from "../components/owners/OwnerList";
 
 export const getOwners = async (): Promise<Owner[]> => {

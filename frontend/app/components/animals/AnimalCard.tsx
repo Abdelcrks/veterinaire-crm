@@ -1,15 +1,16 @@
 import Link from 'next/link';
-import type { Animal } from '@/types';
+import type { Animal } from '@/app/lib/types';
+import { speciesLabels } from '@/app/lib/species';
 
 export const AnimalCard = ({ animal }: { animal: Animal }) => {
   return (
     <Link
       href={`/animals/${animal.id}`}
-      className="block p-4 border rounded-lg hover:bg-gray-50 transition"
+      className="block p-4 border rounded-lg hover:shadow-lg transition"
     >
       <p className="font-semibold">{animal.firstName}</p>
       <p className="text-sm ">
-        {animal.species} — {animal.age} ans
+        {speciesLabels[animal.species] ?? animal.species} {animal.age} ans
       </p>
     </Link>
   )
