@@ -1,4 +1,4 @@
-import { Owner } from "@/app/owners/page"
+import { Owner } from "@/types"
 import Link from "next/link"
 
 export const OwnerList = ({owners}: {owners: Owner[]}) => {
@@ -25,8 +25,9 @@ export const OwnerList = ({owners}: {owners: Owner[]}) => {
                     <p className="font-semibold">
                         {owner.civility} {owner.firstName} {owner.lastName}
                     </p>
-                    <p className="text-sm text-gray-700">
-                    {owner.animals.length === 0 ? 'Aucun animal' : `${owner.animals.length} ${owner.animals.length > 1 ? 'animaux' : 'animal'}`}                    </p>
+                    <p className="text-sm">
+                    {owner.animals.length === 0 ? 'Aucun animal' : `${owner.animals.length} ${owner.animals.length > 1 ? 'animaux' : 'animal'}`}
+                    </p>
                     </Link>
                 ))}
                 </div>

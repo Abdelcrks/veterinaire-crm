@@ -1,22 +1,7 @@
-import { OwnerList } from "../components/owner/OwnerList";
+import { Owner } from "@/types";
+import { OwnerList } from "../components/owners/OwnerList";
 
-export type Animal = {
-    id: number;
-    firstName: string;
-    species: string;
-}
-
-export type Owner = {
-    id: number;
-    civility: string;
-    firstName: string;
-    lastName: string;
-    email: string;
-    phone: string;
-    animals: Animal[];
-}
-
-const getOwners = async (): Promise<Owner[]> => {
+export const getOwners = async (): Promise<Owner[]> => {
     try {
         const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/owners`, {
             cache: 'no-store'
@@ -29,7 +14,7 @@ const getOwners = async (): Promise<Owner[]> => {
         console.error(error)
         return []
     }
-};
+}
 
 export default async function OwnersPage () {
     const owners = await getOwners()
