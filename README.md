@@ -92,3 +92,9 @@ L'application est disponible sur `http://localhost:3001`.
 | POST | `/animals` | Créer un animal |
 | PATCH | `/animals/:id` | Modifier un animal |
 | DELETE | `/animals/:id` | Supprimer un animal |
+
+
+## CORS
+
+Le backend autorise les requêtes depuis `http://localhost:3001`.  
+Si tu changes le port du frontend, mets à jour `app.enableCors()` dans `backend/src/main.ts`.
